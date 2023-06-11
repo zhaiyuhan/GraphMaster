@@ -16,6 +16,7 @@ public:
     GraphGraphicsView(QWidget *parent = nullptr);
     void initEvents();
 public:
+
     void deleteVertex(int id); // 删除顶点 传入参数:ID号
     void updateVertex(int id, QList<QString> &data); // 更新顶点 传入参数:ID号 数据List
     void updateEdge(int id, QMap<int, int> &data); // 更新边 传入参数:ID号 边集信息

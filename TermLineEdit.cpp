@@ -11,10 +11,13 @@ void TermLineEdit::sendMessage(QString state, QString message)
     QTextCursor cursor = this->textCursor();
     // 创建 QTextCharFormat 实例并设置颜色
     QTextCharFormat format;
+
     if(state == "ERROR") {
         format.setForeground(Qt::red);
     }else if(state == "SUCCESS") {
         format.setForeground(Qt::green);
+    }else if(state == "NORAML") {
+        format.setForeground(Qt::black);
     }
     // 将格式应用于 QTextCursor 处理的文本区域
     cursor.setCharFormat(format);

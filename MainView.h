@@ -25,6 +25,9 @@ public:
     void initLayout();
     void initEvents();
     void CORE(MODE mode, int start, int end);
+protected:
+    void getVertexName(QMap<int, QString> &map); // 从文件中获得顶点信息
+    void convertVertexName(QString &res); // 把顶点编号转为顶点名称
 private:
     QVBoxLayout *mainLayout;
     TabWidget *mainTabWidget;
